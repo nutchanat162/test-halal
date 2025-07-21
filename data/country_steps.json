@@ -1,0 +1,20 @@
+[
+  {
+    "country": "Malaysia",
+    "activity": "ใบรับรองฮาลาล",
+    "description": "สินค้าต้องมีใบรับรองฮาลาล",
+    "link": "https://example.com/halal"
+  },
+  {
+    "country": "Malaysia",
+    "activity": "ภาษีนำเข้าต่ำ",
+    "description": "ใช้ FTA อัตราภาษี 5%",
+    "link": ""
+  },
+  {
+    "country": "Saudi Arabia",
+    "activity": "ต้องมีใบอนุญาต",
+    "description": "สินค้าต้องได้รับใบอนุญาตก่อนนำเข้า",
+    "link": "https://example.com/license"
+  }
+]

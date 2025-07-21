@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>หน้าแรก</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div id="header"></div>
+  <div id="navbar"></div>
+
+  <section class="main-content text-center py-5">
+    <picture>
+      <source media="(max-width: 991.98px)" srcset="assets/svg/minimaincontent.svg" />
+      <img src="assets/svg/maincontent.svg" alt="Halal Main Content" class="img-fluid mx-auto d-block" />
+    </picture>
+  </section>
+
+<h1>ยินดีต้อนรับสู่เว็บไซต์</h1>
+<p id="viewCount">กำลังโหลดจำนวนผู้เข้าชม...</p>
+
+
+  <script>
+  // 🔁 ใส่ลิงก์ Web App URL ที่คุณได้จาก Apps Script
+  const apiURL = "https://script.google.com/macros/s/AKfycbyO2mlHx648YJH9d2hCfcGP5zgbJssR4AXVtmAYng9nOaYZzqhVFtl7jdOQTlR0G7EP/exec";
+
+  // ① ส่ง POST เพื่อบันทึกว่าเข้าชม 1 ครั้ง
+  fetch(apiURL, {
+    method: "POST",
+    body: JSON.stringify({}), // ไม่ต้องส่งอะไร
+    headers: { "Content-Type": "application/json" }
+  });
+
+  // ② ส่ง GET เพื่อดึงข้อมูลจำนวนที่นับไว้ใน sheet
+  fetch(apiURL)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("viewCount").innerText =
+        "จำนวนครั้งที่เข้าชมเว็บไซต์: " + data.totalVisits + " ครั้ง";
+    })
+    .catch(err => {
+      console.error("ดึงข้อมูลล้มเหลว:", err);
+      document.getElementById("viewCount").innerText =
+        "เกิดข้อผิดพลาดในการโหลดจำนวน";
+    });
+</script>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/components-loader.js"></script>
+  <script src="js/burger-menu.js"></script>
+</body>
+
+</html>

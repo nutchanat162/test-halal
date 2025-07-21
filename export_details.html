@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>รายละเอียดขั้นตอนการส่งออก</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .step-header-yellow {
+        background-color: #cdae32d0;
+        color: white;
+        padding: 14px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        font-family: "LINESeedSansTH", sans-serif;
+      }
+
+      .step-header-blue {
+        background-color: #4d8ac6;
+        color: white;
+        padding: 14px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        font-family: "LINESeedSansTH", sans-serif;
+      }
+
+      .step-header-green {
+        background-color: #1ba179;
+        color: white;
+        padding: 14px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        font-family: "LINESeedSansTH", sans-serif;
+      }
+
+      .step-header-pink {
+        background-color: #e7a7b4;
+        color: white;
+        padding: 14px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        font-family: "LINESeedSansTH", sans-serif;
+      }
+
+      .step-header-purple {
+        background-color: #9d7cc0;
+        color: white;
+        padding: 14px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        font-family: "LINESeedSansTH", sans-serif;
+      }
+
+      .step-header-orange {
+        background-color: #f5a623;
+        color: white;
+        padding: 14px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        font-family: "LINESeedSansTH", sans-serif;
+      }
+      .export-table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        margin-bottom: 40px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .export-table th {
+        background-color: #eeeeee;
+        padding: 12px;
+        font-weight: bold;
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+      }
+
+      .export-table td {
+        padding: 12px;
+        border-bottom: 1px solid #cccccc; /* หรือ #bbb */
+      }
+
+      .link-btn a {
+        color: #4d8ac6;
+        text-decoration: underline;
+      }
+
+      .link-btn a:hover {
+        color: #2c5f94;
+      }
+
+      @media screen and (max-width: 768px) {
+        .export-table {
+          font-size: 0.9rem;
+        }
+      }
+      /* --------------------------04/04-------------------------- */
+
+      .export-table {
+        table-layout: fixed;
+      }
+
+      .export-table .col-activity {
+        width: 35%;
+      }
+
+      .export-table .col-responsible {
+        width: 50%;
+      }
+
+      .export-table .col-more {
+        width: 15%;
+      }
+
+      /* ---------------------------------------------------- */
+
+      .step-section {
+        margin-bottom: 2rem;
+      }
+
+      .step-header {
+        background-color: #0c685b;
+        color: white;
+        font-weight: bold;
+        padding: 12px 20px;
+        border-radius: 20px 20px 0 0;
+        font-size: 1.1rem;
+        font-family: "LINESeedSansTH", sans-serif;
+      }
+
+      .export-table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        margin: 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-radius: 0 0 20px 20px;
+        overflow: hidden;
+      }
+
+      .export-table thead {
+        background-color: #f1f1f1;
+      }
+
+      .export-table th,
+      .export-table td {
+        padding: 16px 12px;
+        border-bottom: 1px solid #e0e0e0;
+        font-family: "LINESeedSansTH", sans-serif;
+        font-size: 0.95rem;
+        vertical-align: top;
+        text-align: left;
+      }
+
+      .export-table th {
+        color: #0c685b;
+        font-weight: bold;
+        background-color: #e8f5f0;
+      }
+
+      .export-table td a {
+        color: #4d8ac6;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .export-table td a:hover {
+        text-decoration: underline;
+        color: #2c5f94;
+      }
+
+      .export-table .col-activity {
+        width: 30%;
+      }
+
+      .export-table .col-responsible {
+        width: 50%;
+      }
+
+      .export-table .col-more {
+        width: 20%;
+      }
+
+      .step-button {
+        background-color: #4d8ac6;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        border: none;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+
+      .step-button:hover {
+        background-color: #2c5f94;
+      }
+
+      .note-warning {
+        font-size: 0.85rem;
+        color: #d9480f;
+        background: #e6e6e6;
+        padding: 12px 16px;
+        border-radius: 10px;
+        font-family: "LINESeedSansTH", sans-serif;
+        margin: 24px auto 20px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .export-table th,
+        .export-table td {
+          font-size: 0.85rem;
+          padding: 12px 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div id="navbar"></div>
+
+    <!-- Main Content -->
+    <section
+      class="container py-5 px-4"
+      style="font-family: 'LINESeedSansTH', sans-serif"
+    >
+      <h2 id="productName" class="mb-2"></h2>
+      <p class="text-muted mb-4">HS Code: <span id="productId"></span></p>
+      <div class="note-warning">
+        *เอกสารประกอบ ขึ้นอยู่กับรูปแบบการขนส่งและ Incoterms
+        ทั้งนี้ผู้ประกอบการควรตรวจสอบเอกสารประกอบกับตัวแทนออกของหรือผู้นำเข้า
+        เพื่อความถูกต้อง
+      </div>
+
+      <div id="stepSections">
+        <!-- JS will insert categorized steps here -->
+      </div>
+
+      <div id="malaysiaTable" class="step-section" style="display: none">
+     
+
+      <div id="saudiTable" class="step-section" style="display: none"></div>
+
+      <div class="text-center mt-5">
+        <a href="export_steps.html" class="back-button"> 🔙 กลับหน้าค้นหา </a>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get("id");
+      const productName = urlParams.get("name");
+      const country = urlParams.get("country");
+      if (country === "Malaysia") {
+        document.getElementById("malaysiaTable").style.display = "block";
+      } else if (country === "Saudi Arabia") {
+        document.getElementById("saudiTable").style.display = "block";
+      }
+
+      const spreadsheetId = "17jUOQdt8ThUVjEj5ZTd7ghW9prlzi7oGTOFZXO0f1RY";
+
+      document.getElementById("productName").textContent = productName;
+      document.getElementById("productId").textContent = productId;
+
+      async function fetchSheet(sheetName) {
+        const url = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:json&tq&sheet=${sheetName}`;
+        const response = await fetch(url);
+        const text = await response.text();
+        return JSON.parse(text.substring(47, text.length - 2)).table;
+      }
+
+      function getStepNames(row, headers) {
+        const steps = [];
+        for (let i = 2; i < row.c.length; i++) {
+          if (row.c[i]?.v === true) {
+            steps.push(headers[i]);
+          }
+        }
+        return steps;
+      }
+
+      function categorizeStep(row) {
+        return row.c[5]?.v?.trim() || "ไม่ระบุหมวด";
+      }
+
+      function getHeaderClass(category) {
+        if (category.includes("จดทะเบียน")) return "step-header-pink";
+        if (category.includes("เตรียมส่งออก")) return "step-header-blue";
+        if (category.includes("ใบอนุญาต") ) return "step-header-purple";
+        if (country === "Malaysia") return "step-header-yellow";
+        if (country === "Saudi Arabia") return "step-header-green";
+
+        return "step-header-orange"; // default fallback
+      }
+
+      async function loadSteps() {
+        const productTable = await fetchSheet("ProductList");
+        const stepTable = await fetchSheet("ExportSteps");
+
+        const headers = productTable.cols.map((col) => col.label);
+        const matchRow = productTable.rows.find(
+          (row) => row.c[0]?.v == productId || row.c[1]?.v == productName
+        );
+
+        if (!matchRow) {
+          document.getElementById("stepSections").innerHTML =
+            "<p class='text-danger text-center'>ไม่พบข้อมูลสินค้า</p>";
+          return;
+        }
+
+        const activeSteps = getStepNames(matchRow, headers);
+        const relatedSteps = stepTable.rows.filter((row) =>
+          activeSteps.includes(row.c[1]?.v)
+        );
+
+        const categorized = {};
+
+        relatedSteps.forEach((row) => {
+          const cat = categorizeStep(row);
+          if (!categorized[cat]) categorized[cat] = [];
+          categorized[cat].push({
+            name: row.c[1]?.v || "",
+            agency: row.c[2]?.v || "-",
+            description: row.c[3]?.v || "-",
+            link: row.c[4]?.v || "",
+          });
+        });
+
+        const container = document.getElementById("stepSections");
+        Object.keys(categorized).forEach((cat) => {
+          const steps = categorized[cat];
+          const headerClass = getHeaderClass(cat);
+          const section = document.createElement("div");
+          section.className = "step-section";
+          section.innerHTML = `
+          <div class="${headerClass}">${cat}</div>
+          <table class="export-table">
+            <thead>
+  <tr>
+    <th class="col-activity">กิจกรรม</th>
+    <th class="col-responsible">ผู้ดำเนินการ</th>
+    <th class="col-more">อ่านเพิ่มเติม</th>
+  </tr>
+</thead>
+
+            <tbody>
+  ${steps
+    .map(
+      (s) => `
+    <tr>
+      <td class="col-activity">${s.name}</td>
+      <td class="col-responsible">${s.description}</td>
+      <td class="col-more">
+        ${
+          s.link === "BANK_MANUAL"
+            ? `<a href="bank_contact.html" target="_blank">ดูเพิ่มเติม</a>`
+            : s.link
+            ? `<a href="${s.link}" target="_blank">ดูเพิ่มเติม</a>`
+            : "-"
+        }
+      </td>
+    </tr>
+  `
+    )
+    .join("")}
+</tbody>
+
+          </table>
+        `;
+          container.appendChild(section);
+        });
+        console.log("Related Steps:", relatedSteps);
+        console.log("Categorized:", categorized);
+      }
+
+      document.addEventListener("DOMContentLoaded", async () => {
+        await loadSteps();
+        await loadCountrySteps(country); // ✅ ดึงข้อมูลของประเทศมาต่อท้าย
+      });
+    </script>
+    <script>
+      async function loadCountrySteps(country) {
+        if (!country) return;
+
+        const sheetName =
+          country === "Malaysia"
+            ? "Export_Malaysia"
+            : country === "Saudi Arabia"
+            ? "Export_Saudi"
+            : "";
+
+        if (!sheetName) return;
+
+        const productTable = await fetchSheet(sheetName);
+        const stepTable = await fetchSheet("ExportSteps");
+
+        const headers = productTable.cols.map((col) => col.label);
+        const matchRow = productTable.rows.find(
+          (row) => row.c[0]?.v == productId || row.c[1]?.v == productName
+        );
+
+        if (!matchRow) return;
+
+        // ดึงชื่อขั้นตอนที่เป็น TRUE
+        const activeSteps = [];
+        for (let i = 2; i < matchRow.c.length; i++) {
+          if (matchRow.c[i]?.v === true) {
+            activeSteps.push(headers[i]);
+          }
+        }
+
+        // ค้นหาใน ExportSteps ว่ามีขั้นตอนใดที่ตรง
+        const relatedSteps = stepTable.rows.filter((row) =>
+          activeSteps.includes(row.c[1]?.v)
+        );
+
+        // จัดกลุ่มตามหมวดหมู่
+        const categorized = {};
+        relatedSteps.forEach((row) => {
+          let cat = (row.c[5]?.v + "").trim();
+
+          if (!cat || cat.toLowerCase() === "null") {
+            cat = `ขั้นตอนการส่งออกสินค้าในประเทศ${
+              country === "Malaysia" ? "มาเลเซีย" : "ซาอุดิอาระเบีย"
+            }`;
+          }
+
+          if (!categorized[cat]) categorized[cat] = [];
+          categorized[cat].push({
+            name: row.c[1]?.v || "",
+            agency: row.c[2]?.v || "-",
+            description: row.c[3]?.v || "-",
+            link: row.c[4]?.v || "",
+          });
+        });
+
+        // แสดงผล
+        const container = document.getElementById("stepSections");
+        Object.keys(categorized).forEach((cat) => {
+          const steps = categorized[cat];
+          const headerClass = getHeaderClass(cat);
+          const section = document.createElement("div");
+          section.className = "step-section";
+          section.innerHTML = `
+      <div class="${headerClass}">${cat} (${country})</div>
+      <table class="export-table">
+        <thead>
+          <tr>
+            <th class="col-activity">กิจกรรม</th>
+            <th class="col-responsible">ผู้ดำเนินการ</th>
+            <th class="col-more">อ่านเพิ่มเติม</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${steps
+            .map(
+              (s) => `
+            <tr>
+              <td>${s.name}</td>
+              <td>${s.description}</td>
+<td class="col-more">
+  ${s.link ? `<a href="${s.link}" target="_blank">ดูเพิ่มเติม</a>` : "-"}
+</td>
+            </tr>`
+            )
+            .join("")}
+        </tbody>
+      </table>
+    `;
+          container.appendChild(section);
+        });
+      }
+    </script>
+    <script src="js/components-loader.js"></script>
+    <script src="js/burger-menu.js"></script>
+  </body>
+</html>

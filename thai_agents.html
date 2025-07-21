@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>รายชื่อตัวแทนออกของในประเทศไทย</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* -------------------------- โซนทั่วไป -------------------------- */
+      body {
+        font-family: "LINESeedSansTH", sans-serif;
+      }
+
+      .section-spacing {
+        margin: 60px 0;
+      }
+
+      /* ---------------------- ปุ่มเลือกชีท ---------------------- */
+      .btn-group-sheets {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      .btn-group-sheets .btn-sheet {
+        background: white;
+        border: 2px solid #0c685b;
+        color: #0c685b;
+        padding: 10px 20px;
+        border-radius: 999px;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 6px rgba(0, 104, 91, 0.08);
+        position: relative;
+        z-index: 1;
+      }
+
+      .btn-group-sheets .btn-sheet:hover {
+        background-color: #e0f3ec;
+        transform: translateY(-1px);
+      }
+
+      .btn-group-sheets .btn-sheet.btn-active {
+        background-color: #0c685b;
+        color: white;
+        box-shadow: 0 4px 12px rgba(0, 104, 91, 0.25);
+        border-color: #0c685b;
+        transform: scale(1.05);
+        z-index: 2;
+      }
+      /* ---------------------- ตาราง ---------------------- */
+      .table-container {
+        width: 100%;
+        max-width: none;
+        overflow-x: auto;
+        padding: 0;
+      }
+
+      table.table {
+        width: 100%;
+        table-layout: auto; /* สำคัญ: ขยายตามเนื้อหา */
+        border-collapse: separate;
+        border-spacing: 0;
+        min-width: 1000px;
+      }
+
+      table.table th,
+      table.table td {
+        padding: 0.75rem;
+        word-break: break-word;
+        white-space: normal;
+        font-size: 0.95rem;
+      }
+      table.table th {
+        background-color: #0c685b;
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+      table.table td:first-child,
+      table.table th:first-child {
+        width: 60px;
+        text-align: center;
+      }
+
+      table.table td:last-child {
+        max-width: 200px;
+      }
+      /* หัวตาราง */
+      table.table thead th:first-child {
+        border-top-left-radius: 12px;
+      }
+      table.table thead th:last-child {
+        border-top-right-radius: 12px;
+      }
+
+      /* แถวล่างสุดของตาราง */
+      table.table tbody tr:last-child td:first-child {
+        border-bottom-left-radius: 12px;
+      }
+      table.table tbody tr:last-child td:last-child {
+        border-bottom-right-radius: 12px;
+      }
+      .col-wide {
+  min-width: 250px;
+  max-width: 400px;
+  word-break: break-word;
+  white-space: normal;
+}
+      
+        
+
+      .pagination-container {
+        text-align: center;
+        margin-top: 32px;
+      }
+
+      .pagination {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        list-style: none;
+        padding: 0;
+        justify-content: center;
+      }
+
+      .page-link {
+        display: inline-block;
+        padding: 8px 16px;
+        border-radius: 999px;
+        border: 1.5px solid #0c685b;
+        color: #0c685b;
+        background-color: white;
+        font-family: "LINESeedSansTH", sans-serif;
+        transition: all 0.2s ease;
+        text-decoration: none;
+      }
+
+      .page-link:hover {
+        background-color: #e0f3ec;
+        color: #0c685b;
+      }
+
+      .page-item.active .page-link {
+        background-color: #0c685b;
+        color: white;
+        font-weight: 600;
+        transform: scale(1.05);
+      }
+
+      /* ---------------------- Responsive ---------------------- */
+      @media screen and (max-width: 768px) {
+        table.table th,
+        table.table td {
+          font-size: 0.75rem;
+          padding: 0.5rem;
+        }
+
+        .btn-group-sheets .btn-sheet {
+          display: block;
+          width: 100%;
+          margin: 6px 0;
+        }
+      }
+
+      /* ---------------------- Hamburger + Mobile Menu ---------------------- */
+      .hamburger-btn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: #065f54;
+        z-index: 1050;
+        display: none;
+      }
+
+      @media (max-width: 991.98px) {
+        .hamburger-btn {
+          display: block;
+        }
+
+        .halal-navbar {
+          display: none !important;
+        }
+      }
+
+      .mobile-slide-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 1040;
+      }
+
+      .mobile-slide-menu.open {
+        display: block;
+      }
+
+      .slide-menu-content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #c5e3bf;
+        padding: 3rem 1.5rem 1.5rem;
+        box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+        animation: slideIn 0.3s forwards;
+      }
+
+      .slide-menu-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .slide-menu-content li {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 0.5rem;
+      }
+
+      .slide-menu-content a {
+        text-decoration: none;
+        color: #065f54;
+        font-size: 1.1rem;
+        font-family: "LINESeedSansTH", sans-serif;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: #065f54;
+        z-index: 1060;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(100%);
+        }
+
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+  </head>
+
+  <body style="font-family: 'LINESeedSansTH', 'LINE Seed Sans TH', sans-serif">
+    <div id="header"></div>
+    <div id="navbar"></div>
+
+    <!-- 🔹 ปุ่มเลือกชีท -->
+    <div class="container section-spacing">
+      <div class="btn-group-sheets">
+        <button
+          class="btn-sheet btn-active"
+          data-sheet="AEO"
+          onclick="loadAgents('AEO')"
+        >
+          รายชื่อตัวแทนออกของในประเทศไทย
+        </button>
+        <button
+          class="btn-sheet"
+          data-sheet="PORT"
+          onclick="loadAgents('PORT')"
+        >
+          รายชื่อผู้รับจัดการขนส่งจากการท่าเรือ
+        </button>
+        <button
+          class="btn-sheet"
+          data-sheet="TIFFA-MARK"
+          onclick="loadAgents('TIFFA-MARK')"
+        >
+          รายชื่อสมาชิก TIFFA-MARK
+        </button>
+      </div>
+
+      <!-- 🔹 ตารางผลลัพธ์ -->
+      <div class="table-container">
+        <div class="table-responsive">
+          <table class="table table-striped" id="agentTable">
+            <thead id="tableHead"></thead>
+            <tbody id="agentTableBody"></tbody>
+          </table>
+        </div>
+        <div id="pagination" class="pagination-container"></div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/agentLoader.js"></script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/components-loader.js"></script>
+    <script src="js/burger-menu.js"></script>
+  </body>
+</html>

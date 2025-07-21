@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ผู้นำเข้าสินค้าของมาเลเซีย</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* ส่วนตกแต่งเฉพาะหน้านี้ */
+      .section-spacing {
+        margin: 60px 0;
+      }
+
+      .info-box {
+        background-color: #eafaf2;
+        border-left: 5px solid #0c685b;
+        padding: 2rem;
+        border-radius: 12px;
+        text-align: center;
+        animation: fadeIn 0.8s ease-in;
+      }
+
+      .info-box h2 {
+        color: #0c685b;
+        font-weight: bold;
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+
+      .info-box h2::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: #f7931e;
+        border-radius: 4px;
+      }
+
+      .info-box p {
+        font-size: 1.1rem;
+        color: #333;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 576px) {
+        .info-box {
+          padding: 1.5rem;
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body style="font-family: 'LINESeedSansTH', 'LINE Seed Sans TH', sans-serif">
+    <div id="header"></div>
+    <div id="navbar"></div>
+
+
+    <!-- 🔸 Main Content -->
+    <main class="main-content">
+      <div class="container section-spacing">
+        <div class="info-box">
+          <h2>ผู้นำเข้าสินค้าของมาเลเซีย</h2>
+          <p>
+            ข้อมูลรายชื่อผู้นำเข้าสินค้าของประเทศมาเลเซียจะถูกเพิ่มเข้ามาในเฟสถัดไปของระบบ<br />
+            Halal Export Database โปรดติดตามการอัปเดตจากทีมงานเร็ว ๆ นี้
+          </p>
+        </div>
+      </div>
+            <div class="container section-spacing">
+        <div class="info-box">
+          <h2>ผู้นำเข้าสินค้าของซาอุดิอาระเบีย</h2>
+          <p>
+            ข้อมูลรายชื่อผู้นำเข้าสินค้าของประเทศซาอุดิอาระเบียจะถูกเพิ่มเข้ามาในเฟสถัดไปของระบบ<br />
+            Halal Export Database โปรดติดตามการอัปเดตจากทีมงานเร็ว ๆ นี้
+          </p>
+        </div>
+      </div>
+    </main>
+
+   <div id="footer"></div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/components-loader.js"></script>
+    <script src="js/burger-menu.js"></script>
+
+  </body>
+</html>
