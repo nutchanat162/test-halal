@@ -289,37 +289,46 @@
           display: none !important;
         }
       }
-      .decor-left-mobile,
-      .decor-right-mobile { 
-                bottom: 20%;
-      }
+  .decor-left-mobile {
+    top: 80px;     /* ✅ เลื่อนลงจากขอบบน 80px */
+    left: 0;
+    width: 90px;
+  }
+
+  .decor-right-mobile {
+    top: 120px;    /* ✅ เลื่อนลงจากขอบบน 120px */
+    right: 0;
+    width: 90px;
+  }
       @media screen and (max-width: 991.98px) {
         .decor-left,
         .decor-right {
           display: none !important;
         }
 
-        .decor-left-mobile,
-        .decor-right-mobile {
-          display: block;
-          position: absolute;
-          width: 50px;
-          height: auto;
-          z-index: 2;
-        }
+  /* ✅ แสดงภาพ mobile */
+  .decor-left-mobile,
+  .decor-right-mobile {
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: auto;
+    z-index: 1;
+    opacity: 0.5;
+  }
 
-        .decor-left-mobile {
-          left: 10px;
-          top: 45%;
-          transform: translateY(-350%);
-        }
+  .decor-left-mobile {
+    left: 10px;
+    top: 120px; /* ✅ ลอยลงมาต่ำกว่าหัวเว็บ */
+    transform: none;
+  }
 
-        .decor-right-mobile {
-          right: 10px;
-          top: 42%;
-          transform: translateY(-350%);
-        }
-      }
+  .decor-right-mobile {
+    right: 10px;
+    top: 160px;
+    transform: none;
+  }
+}
     </style>
 
     <div id="header"></div>
