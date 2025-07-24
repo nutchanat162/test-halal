@@ -17,7 +17,9 @@
 body {
   font-family: "LINESeedSansTH", "LINE Seed Sans TH", sans-serif;
 }
-
+#hero {
+  scroll-margin-top: 80px; 
+}
 .logo img {
   max-height: 70px;
   height: auto;
