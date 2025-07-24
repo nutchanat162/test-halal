@@ -841,7 +841,6 @@ mark {
   .top-header picture,
   .main-content picture,
   .footer-image picture,
-  .top-header img,
   .main-content img,
   .footer-image img {
     display: block;
