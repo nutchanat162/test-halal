@@ -358,9 +358,8 @@
 
 
       <div class=" mt-5">
-        <a href="export_steps.html" class="back-button">
-          🔙 กลับหน้าค้นหา
-        </a>
+
+        <button class="back-button" onclick="goBack()">🔙 ย้อนกลับ</button>
       </div>
     </div>
   </main>
@@ -369,6 +368,11 @@
   <div id="footer"></div>
     <script src="js/components-loader.js"></script>
     <script src="js/burger-menu.js"></script>
+    <script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
 
 
 </body>

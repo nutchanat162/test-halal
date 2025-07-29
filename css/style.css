@@ -365,6 +365,8 @@ input#searchTerm {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 24px;
+  outline: none; /* ✅ ปิด outline */
+  border: none;  /* ✅ ป้องกันขอบบางเบราว์เซอร์ */
 }
 
 .back-button:hover {
@@ -372,6 +374,11 @@ input#searchTerm {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   color: #ffffff;
 }
+
+.back-button:focus {
+  outline: none; /* ✅ ปิดกรอบตอนโฟกัสด้วยคีย์บอร์ด */
+}
+
 
 /* ---------------------------------------------02/04------------------- */
 .halal-navbar {

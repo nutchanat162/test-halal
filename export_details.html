@@ -369,7 +369,7 @@
       <td class="col-more">
         ${
           s.link === "BANK_MANUAL"
-            ? `<a href="bank_contact.html" target="_blank">ดูเพิ่มเติม</a>`
+            ? `<a href="bank_contact.html" >ดูเพิ่มเติม</a>`
             : s.link
             ? `<a href="${s.link}" target="_blank">ดูเพิ่มเติม</a>`
             : "-"
@@ -476,8 +476,15 @@
               <td>${s.name}</td>
               <td>${s.description}</td>
 <td class="col-more">
-  ${s.link ? `<a href="${s.link}" target="_blank">ดูเพิ่มเติม</a>` : "-"}
+  ${
+    s.link
+      ? s.link.startsWith("http")
+        ? `<a href="${s.link}" target="_blank">ดูเพิ่มเติม</a>`
+        : `<a href="${s.link}">ดูเพิ่มเติม</a>`
+      : "-"
+  }
 </td>
+
             </tr>`
             )
             .join("")}
